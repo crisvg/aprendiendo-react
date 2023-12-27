@@ -30,10 +30,8 @@ function App () {
     resetGameStorage()
   }
 
-  const updateBoard = (index) => {
-    // no actualizamos esta posición
-    // si ya tiene algo
-    if (board[index] || winner) return
+  const updateBoard = (index) => { //Logica del tablero
+    if (board[index] || winner) return // Si es diferente de null no hace nada. Evita la sobreescritura.
     // actualizar el tablero
     const newBoard = [...board]
     newBoard[index] = turn
